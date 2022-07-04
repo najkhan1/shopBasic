@@ -18,6 +18,6 @@ libraryDependencies ++= Seq(
   "com.typesafe" % "config" % typeSafeConfig,
   "com.typesafe.scala-logging" %% "scala-logging" % typeSafeLogging,
   "org.slf4j" % "slf4j-api" % logger,
-  "org.slf4j" % "slf4j-simple" % logger % Test
+  "org.slf4j" % "slf4j-simple" % logger
 
 )
