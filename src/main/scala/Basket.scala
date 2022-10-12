@@ -8,10 +8,10 @@ import com.typesafe.scalalogging._
 
 case class Basket(items :List[String])
 
-case class Products(apples: Int, oranges :Int, bannana: Int){
+case class Products(apples: Int, oranges :Int, banana: Int){
   def addApple(): Products = this.copy(apples + 1,oranges)
   def addOrange(): Products = this.copy(apples,oranges + 1)
-  def addBannana(): Products = this.copy(apples, oranges, bannana + 1)
+  def addBannana(): Products = this.copy(apples, oranges, banana + 1)
 }
 object Basket  extends LazyLogging {
 
@@ -28,11 +28,11 @@ object Basket  extends LazyLogging {
         acc
     })
    val cost =  (appleOffer,orangeOffer,bannaOffer) match {
-      case (true,true, true) => bannanaOffer(appleBuyOneGetOneFree(products.apples),products.bannana) + orangeThreeForTwo(products.oranges)
-      case (true,false,true) => bannanaOffer(appleBuyOneGetOneFree(products.apples),products.bannana) + (products.oranges * orangePrice)
-      case (false,true,true) => bannanaOffer((products.apples * applePrice),products.bannana) + orangeThreeForTwo(products.oranges)
-      case (true,true,false) => bannanaOffer((products.apples * applePrice),products.bannana) + orangeThreeForTwo(products.oranges)
-      case (false,false,false) => (products.apples * applePrice) + (products.oranges * orangePrice) + (0.2 * products.bannana)
+      case (true,true, true) => bannanaOffer(appleBuyOneGetOneFree(products.apples),products.banana) + orangeThreeForTwo(products.oranges)
+      case (true,false,true) => bannanaOffer(appleBuyOneGetOneFree(products.apples),products.banana) + (products.oranges * orangePrice)
+      case (false,true,true) => bannanaOffer((products.apples * applePrice),products.banana) + orangeThreeForTwo(products.oranges)
+      case (true,true,false) => bannanaOffer((products.apples * applePrice),products.banana) + orangeThreeForTwo(products.oranges)
+      case (false,false,false) => (products.apples * applePrice) + (products.oranges * orangePrice) + (0.2 * products.banana)
     }
     val total = s"£${BigDecimal(cost).setScale(2)}"
 
