@@ -9,6 +9,7 @@ import com.typesafe.scalalogging._
 case class Basket(items :List[String])
 
 case class Products(apples: Int, oranges :Int, banana: Int){
+
   def addApple(): Products = this.copy(apples + 1,oranges)
   def addOrange(): Products = this.copy(apples,oranges + 1)
   def addBannana(): Products = this.copy(apples, oranges, banana + 1)
