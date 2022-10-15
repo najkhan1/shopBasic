@@ -3,7 +3,6 @@ package com.naj
 import org.scalatest.funspec.AnyFunSpec
 import org.scalatest.matchers.should.Matchers.convertToAnyShouldWrapper
 
-
 class BasketSpec extends AnyFunSpec{
 
   describe("Test Basket"){
