@@ -6,6 +6,7 @@ import org.scalatest.matchers.should.Matchers.convertToAnyShouldWrapper
 class BasketSpec extends AnyFunSpec{
 
   describe("Test Basket") {
+
     import com.naj.Basket._
     val methodUnderTest = (itemList :List[String],appleOffer :Boolean, orangeOffer :Boolean) =>  calculateCost(itemList,appleOffer, orangeOffer)
 
