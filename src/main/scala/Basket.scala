@@ -4,8 +4,6 @@ import com.naj.Items.{apple, bannana, orange}
 import com.typesafe.scalalogging._
 import com.typesafe.scalalogging._
 
-
-
 case class Basket(items :List[String])
 
 case class Products(apples: Int, oranges :Int, banana: Int){
