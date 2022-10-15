@@ -1,7 +1,5 @@
-package com.naj
 
-import com.naj.Items.{apple, bannana, orange}
-import com.typesafe.scalalogging._
+import Items.{apple, bannana, orange}
 import com.typesafe.scalalogging._
 
 case class Basket(items :List[String])
@@ -32,6 +30,7 @@ object Basket  extends LazyLogging {
       case (false,true,true) => bannanaOffer((products.apples * applePrice),products.banana) + orangeThreeForTwo(products.oranges)
       case (true,true,false) => bannanaOffer((products.apples * applePrice),products.banana) + orangeThreeForTwo(products.oranges)
       case (false,false,false) => (products.apples * applePrice) + (products.oranges * orangePrice) + (0.2 * products.banana)
+      case _ => bannanaOffer(appleBuyOneGetOneFree(products.apples),products.banana) + orangeThreeForTwo(products.oranges)
     }
     val total = s"£${BigDecimal(cost).setScale(2)}"
 

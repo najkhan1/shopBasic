@@ -1,5 +1,4 @@
-import com.naj.Basket
-import com.naj.Basket.calculateCost
+import Basket.calculateCost
 
 object Main {
   def main(args: Array[String]): Unit = {

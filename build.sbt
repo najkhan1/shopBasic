@@ -4,8 +4,7 @@ ThisBuild / scalaVersion := "2.13.8"
 
 lazy val root = (project in file("."))
   .settings(
-    name := "FruitShopBasket",
-    idePackagePrefix := Some("com.naj")
+    name := "FruitShopBasket"
   )
 
 val scalaTest = "3.2.12"
