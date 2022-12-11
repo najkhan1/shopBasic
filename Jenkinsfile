@@ -2,10 +2,16 @@ pipeline {
     agent any
 
     stages {
-        stage('Build') {
+        stage('Compile') {
             steps {
                 echo "Compiling..."
-                sh "sbt compile"
+                sh "/usr/bin/sbt compile"
+            }
+        }
+        stage('Test') {
+            steps {
+                echo "Compiling..."
+                sh "/usr/bin/sbt testOnly"
             }
         }
     }
