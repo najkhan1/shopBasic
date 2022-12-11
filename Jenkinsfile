@@ -14,5 +14,11 @@ pipeline {
                 sh "/usr/bin/sbt testOnly"
             }
         }
+        stage('Package') {
+            steps {
+                echo "Compiling..."
+                sh "/usr/bin/sbt package"
+            }
+        }
     }
 }
