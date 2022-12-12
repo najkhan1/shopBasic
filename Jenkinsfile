@@ -10,7 +10,7 @@ pipeline {
         }
         stage('Test') {
             steps {
-                echo "Compiling..."
+                echo "Testing..."
                 sh "/usr/bin/sbt testOnly"
             }
         }
