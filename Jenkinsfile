@@ -16,7 +16,7 @@ pipeline {
         }
         stage('Package') {
             steps {
-                echo "Compiling..."
+                echo "Packaging..."
                 sh "/usr/bin/sbt package"
             }
         }
