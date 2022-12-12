@@ -20,5 +20,10 @@ pipeline {
                 sh "/usr/bin/sbt package"
             }
         }
+        stage('Finish') {
+            steps {
+                echo "Finished..."
+            }
+        }
     }
 }
